@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <img src="./images/escudo-primerajunta.png" alt="Escudo de primera junta" >
+        <h1>ASOCIACION ATLETICO PRIMERA JUNTA</h1>
+    </header>
+    <section class="form-jugadores"> 
+        <h4>CONVOCATORIA</h4> 
+        <form id="jugadorForm"> 
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required> 
+            <input class="controls" type="number" name="edad" id="edad" placeholder="Ingrese su edad" required> 
+            <input class="controls" type="number" name="altura" id="altura" placeholder="Ingrese su altura" step="0.01" required> 
+            <input class="controls" type="number" name="primeraNota" id="primeraNota" placeholder="Ingrese su primera nota" min="1" max="10" required> 
+            <input class="controls" type="number" name="segundaNota" id="segundaNota" placeholder="Ingrese su segunda nota" min="1" max="10" required> 
+            <input class="botons" type="submit" value="Agregar Jugador"> 
+        </form> 
+    </section> 
+    
+    <ul id="listaJugadores"></ul>
+    
+    <section class="form-jugadores">
+        <h4>SISTEMA DE FILTRADO JUGADORES</h4>
+        <button class="botons" onclick="ordenarPorNombre()">Ordenar por Nombre</button>
+        <button class="botons" onclick="ordenarPorEdad()">Ordenar por Edad</button>
+        <button class="botons" onclick="ordenarPorAltura()">Ordenar por Altura</button>
+        <button class="botons" onclick="filtrarPorEstado('Citado')">Filtrar Citados</button>
+        <button class="botons" onclick="filtrarPorEstado('No Citado')">Filtrar No Citados</button>
+        <button class="botons" onclick="mostrarTodos()">Mostrar Todos</button>
+    </section>
+
+    <section class="form-jugadores">
+        <h4>PRODUCTOS</h4>
+        <div id="productos">
+            <div class="producto">
+                <img src="./images/equipaciones/producto1.png" alt="Remera Titular">
+                <p>Remera Titular</p>
+                <p>$25.000</p>
+                <button class="botons" onclick="agregarAlCarrito('Remera Titular')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/equipaciones/producto2.png" alt="Remera Alternativa">
+                <p>Remera Alternativa</p>
+                <p>$25.000</p>
+                <button class="botons" onclick="agregarAlCarrito('Remera Alternativa')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/equipaciones/producto3.png" alt="Remera Suplente">
+                <p>Remera Suplente</p>
+                <p>$25.000</p>
+                <button class="botons" onclick="agregarAlCarrito('Remera Suplente')">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-jugadores">
+        <h4>CARRITO</h4>
+        <ul id="carrito"></ul>
+    </section>
+
+    <script src="./index.js"></script> 
+</body>
+</html>

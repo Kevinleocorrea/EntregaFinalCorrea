@@ -1,0 +1,123 @@
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;    
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #070000; 
+}
+
+header img{
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+}
+
+.form-jugadores {
+    background: #06a90c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border: 2px solid #800020; 
+}
+
+.form-jugadores h4 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.controls {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.controls:focus {
+    border-color: #800020; 
+    outline: none;
+}
+
+.botons {
+    display: block;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    background: #800020; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botons:hover {
+    background: #660018;
+}
+
+ul#listaJugadores {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+ul#listaJugadores li {
+    background: #e9ecef;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    flex: 0 1 calc(25% - 20px); 
+    box-sizing: border-box;
+}
+
+.producto img {
+    width: 100px;
+    height: 100px;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+#carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+#carrito li {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#carrito li.linea-divisoria {
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+}
